@@ -1,0 +1,35 @@
+What is Prototype
+1-We have a complex object that is costly to create. To create more instances of
+such class, we use an existing instance as our prototype.
+
+2- Prototype will allow us to make copies of existing object and save us from having
+to recreate objects from scratch.
+
+Implement a Prototype
+1- We start by creating a class which will be a prototype.
+ 1.1 - The class must implement Cloneable Interface.
+ 1.2 - Class should override clone method and return copy of itself.
+ 1.3 - The method should declare CloneNotSupportedException in throws
+     clause to give subclasses chance to decide on whether to support cloning.
+
+2-Clone method implementation should consider the deep and shallow
+  copy and choose whichever is applicable
+
+Implementation Considerations
+1-Pay attention to the deep copy and shallow copy of references.Immutable
+  fields on clones save the trouble of deep copy.
+2- Make sure to reset the mutable state of object before returning the prototype.
+   Its a good idea to im plement this in method to allow subclasses to initialize themselves.
+3-Clone() method is protected in Object class and must be overridden to be public
+  to be callable from outside the class.
+4- Cloneable is a marker interface, an indication that the class supports clonning.
+
+Design Considerations
+1-Prototypes are useful when you ahve large objects where majority of state
+  is unchanged between instances and you can easily identify that state.
+2- A prototype registry is a class where in you can register various prototypes which
+   other code can access to clone out instances.This solves the issue of getting
+   access to initial instance.
+3-Prototypes are useful when working with composite and decorator patterns.
+
+
