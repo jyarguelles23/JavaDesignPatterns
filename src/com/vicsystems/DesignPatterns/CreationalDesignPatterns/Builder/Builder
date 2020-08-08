@@ -1,0 +1,13 @@
+Implement a Builder
+
+1- Tenemos un proceso complejo para construir un objeto con muchos pasos, el builder design pattern puede ayudarnos.
+2- En builder quitamos la logica relacionada a la construccion del objecto from client code y abstraerlo en clases separadas.
+
+Pasos para Implementar este Patron
+1- Crear el builder.
+ 1.1- Identificar los atributos del producto y proveer metodos para crear esos atributos.
+ 1.2- It should provide a method to assemble or build the product/object.
+ 1.3- It must provide a way/method to get fully built object out. Optionally builder can keep reference to an product
+       it has built so the same can be returned again in the future.
+
+2- A director can be a separate class or client can play the role of director(Service or a Controller).
