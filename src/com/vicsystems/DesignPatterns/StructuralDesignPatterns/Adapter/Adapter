@@ -1,0 +1,17 @@
+Adapter
+
+1- We have an existing object which provides the functionality that client needs. But client code cant use
+   this object beacause it expects an object with different interface.
+2- Using adapter design pattern we make this existing object work with client by adapting the object to clients
+   expected interface.
+3- This patter is also called as wrapper asi wraps existing object.
+
+Implement
+1- Create a class for Adapter
+    1.1-Adapter must implement the interface expected by client.
+    1.2-First we are going to try out a class adapter by also extending from our existing class.
+    1.3-In the class adapter implementation we are simply going to forward the method to another method inherited from adaptee.
+    1.4- Next for object adapter we are only going to implement target interface and accept adaptee as constructor
+         argument in adapter, make use of composition.
+2-An object adapter should take adaptee as an argument in constructor or as a less preferred solution, you can instantiate it
+  in the constructor thus tightly coupling with a specific adaptee.
